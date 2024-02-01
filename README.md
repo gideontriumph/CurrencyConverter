@@ -1,2 +1,2 @@
 # CurrencyConverter
-Hello, My name is Triumph Ogbonnia and I am from Nigeria. This is one of my Think Aloud, a currency converter.
+Hello, My name is Triumph Ogbonnia and I am from Nigeria. This is one of my Think Aloud, a calculator app!
