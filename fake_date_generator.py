@@ -1,3 +1,10 @@
+"""
+    Name: fake_data_generator
+    Author: Triumph Ogbonnia
+    Created: 2/29/24
+    Finished: 3/2/24
+    Purpose: Create fake user data
+"""
 # pip install faker
 # Import necessary libraries and modules.
 from faker import Faker
@@ -90,17 +97,17 @@ number_of_users = int(input("[!] Enter the number of users to generate: "))
 user_data = generate_user_data(number_of_users)
 
 # Ask the user if they want to save the data to a file.
-save_option = input("[?] Do you want to save the data to a file? (yes/no): ").lower()
+save_option = input("[?] Do you want to save the data to a file (yes/no): ").lower()
 
 # If the user chooses to save the data.
-if save_option == 'yes':
+if save_option == 'yes' or 'y':
     # Ask the user for the file type (CSV, TXT, or both).
     file_type = input("[!] Enter file type (csv/txt/both): ").lower()
 
     # Save to CSV if the user chose CSV or both.
     if file_type == 'csv' or file_type == 'both':
         # Ask the user for the CSV filename.
-        custom_filename_csv = input("[!] Enter the CSV filename (without extension): ")
+        custom_filename_csv = input("[!] Enter the CSV filename: ")
         # Concatenate the filename with the .csv extension.
         filename_csv = f"{custom_filename_csv}.csv"
         # Call the save_to_csv function to save the data to the CSV file.
@@ -109,7 +116,7 @@ if save_option == 'yes':
     # Save to TXT if the user chose TXT or both.
     if file_type == 'txt' or file_type == 'both':
         # Ask the user for the TXT filename.
-        custom_filename_txt = input("[!] Enter the TXT filename (without extension): ")
+        custom_filename_txt = input("[!] Enter the TXT filename: ")
         # Concatenate the filename with the .txt extension.
         filename_txt = f"{custom_filename_txt}.txt"
         # Call the save_to_text function to save the data to the text file.
